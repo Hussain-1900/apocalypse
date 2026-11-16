@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>APOCALYPSE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="hud">
+        <div class="hud-left">
+          <div class="stat-block">
+            <span class="label">LV</span>
+            <span id="levelText">1</span>
+          </div>
+          <div class="stat-block">
+            <span class="label">HP</span>
+            <span id="hpText">100 / 100</span>
+          </div>
+          <div class="stat-block">
+            <span class="label">XP</span>
+            <span id="xpText">0 / 100</span>
+          </div>
+        </div>
+        <div class="hud-right">
+          <span class="score">Kills: <strong id="killsText">0</strong></span>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="joystickArea" class="joystick-area">
+        <div id="joystickBase" class="joystick-base">
+          <div id="joystickKnob" class="joystick-knob"></div>
+        </div>
+      </div>
+
+      <button id="fireButton" class="fire-button">FIRE</button>
+
+      <div id="upgradePanel" class="upgrade-panel hidden">
+        <div class="panel-header">Choose Upgrade</div>
+        <div id="upgradeCards" class="upgrade-cards"></div>
+      </div>
+
+      <div id="startPanel" class="start-panel">
+        <div class="title">APOCALYPSE</div>
+        <div class="subtitle">Zombie survival prototype</div>
+        <button id="startButton">Start Game</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
